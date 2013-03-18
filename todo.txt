@@ -1,0 +1,2 @@
+- connect VU meters
+- make pre/post VU's work
