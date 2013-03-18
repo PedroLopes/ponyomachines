@@ -1,4 +1,4 @@
-#N canvas 2401 295 637 447 10;
+#N canvas 2464 330 637 447 10;
 #N canvas 3107 49 694 932 mixer 0;
 #X obj 222 173 +~;
 #X obj 180 173 +~;
@@ -109,7 +109,7 @@
 #X obj 141 289 env~;
 #X obj 313 293 env~;
 #X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 33.2627 256;
+-262144 -1 -1 100 256;
 #X obj 296 100 / 100;
 #X obj 203 140 *~;
 #X obj 253 140 *~;
@@ -378,7 +378,7 @@
 #X obj 141 289 env~;
 #X obj 313 293 env~;
 #X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 42.7966 256;
+-262144 -1 -1 100 256;
 #X obj 296 100 / 100;
 #X obj 203 140 *~;
 #X obj 253 140 *~;
@@ -514,13 +514,13 @@
 #X obj 107 25 cnv 15 58 300 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 117 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 33.2627 256;
+-86277 -261234 -1 100 256;
 #X obj 117 254 knob 32 32 -50 50 0 0 track2_bal empty empty 0 -12 0
 8 -185360 -261234 -1 1550 1;
 #X obj 117 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -86277 -261234 -1 0 256;
 #X obj 117 69 vsl 15 119 0 125 0 0 track2_vol empty empty 0 -9 0 10
--185360 -261234 -1 3140 1;
+-185360 -261234 -1 9440 1;
 #X obj 117 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 117 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -580,13 +580,13 @@
 #X obj 334 25 cnv 15 58 300 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 344 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 42.7966 256;
+-86277 -261234 -1 100 256;
 #X obj 344 254 knob 32 32 -50 50 0 0 master_bal empty empty 0 -12 0
 8 -185360 -261234 -1 1550 1;
 #X obj 344 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -86277 -261234 -1 0 256;
 #X obj 344 69 vsl 15 119 0 125 0 0 master_vol empty empty 0 -9 0 10
--185360 -261234 -1 4040 1;
+-185360 -261234 -1 9440 1;
 #X obj 344 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 344 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -611,6 +611,14 @@
 #X text 415 74 comment;
 #X obj 428 80 comment 0 10 helvetica ? 0 252 196 196 pre;
 #X obj 428 95 comment 0 10 helvetica ? 0 252 196 196 post;
+#N canvas 3157 584 450 300 init 0;
+#X obj -736 53 bng 15 250 50 0 mixer_reset empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -736 26 loadbang;
+#X msg -736 80 \; pd dsp 1;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X restore 415 308 pd init;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 5 0 6 0;
