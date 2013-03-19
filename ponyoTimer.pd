@@ -1,1 +1,57 @@
-#N canvas 529 214 641 447 10;
+#N canvas 445 115 641 447 10;
+#X obj 135 90 cnv 15 252 212 empty empty ponyoTimer 10 20 0 22 -185360
+-261682 0;
+#X obj 146 167 cnv 15 66 44 empty empty empty 20 12 0 8 -86277 -261234
+0;
+#X obj 150 174 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -185360
+-261234 -1 0;
+#X obj 170 175 comment 0 10 helvetica ? 0 252 196 196 LFO;
+#X obj 170 191 comment 0 10 helvetica ? 0 252 196 196 random;
+#X obj 146 134 cnv 15 66 30 empty empty empty 4 8 0 10 -86277 -261234
+0;
+#X obj 151 142 bng 15 250 50 0 timer_reset empty reset 17 7 0 10 -185360
+-261234 -261234;
+#X obj 215 134 cnv 15 161 156 empty empty empty 4 8 0 10 -86277 -261234
+0;
+#X obj 146 214 cnv 15 66 56 empty empty empty 20 12 0 8 -86277 -261234
+0;
+#X obj 151 223 bng 15 250 50 0 empty empty click 17 8 0 10 -185360
+-261234 -261234;
+#X obj 151 246 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -261234 0 256;
+#X obj 224 267 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 400.095 256;
+#X obj 224 190 vsl 15 74 10 2000 0 0 empty empty base 0 -42 0 10 -185360
+-261234 -261234 1431 1;
+#X obj 224 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 224 171 400;
+#X obj 277 267 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 0 256;
+#X obj 277 190 vsl 15 74 0 100 0 0 empty empty width 0 -42 0 10 -185360
+-261234 -261234 0 1;
+#X obj 277 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 277 171 0;
+#X obj 322 267 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 1000.09 256;
+#X obj 322 190 vsl 15 74 10 2000 0 0 empty empty speed 0 -42 0 10 -185360
+-261234 -261234 3632 1;
+#X obj 322 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 322 171 1000;
+#N canvas 1621 414 450 300 timer 0;
+#X obj -33 102 bng 15 250 50 0 timer_reset empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj -33 75 loadbang;
+#X connect 1 0 0 0;
+#X restore 408 285 pd timer;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 12 0;
+#X connect 16 0 15 0;
+#X connect 17 0 18 0;
+#X connect 18 0 16 0;
+#X connect 20 0 19 0;
+#X connect 21 0 22 0;
+#X connect 22 0 20 0;
