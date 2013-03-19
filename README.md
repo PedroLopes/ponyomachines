@@ -8,7 +8,7 @@ They have been created using <i>pd-0.43-extended</i> which can be downloaded her
 PONYOMIXER:9000
 ---------------
 
-Extensible 4-channel audio-mixer for Pure Data.
+Extensible 4-channel audio-mixer.
 
 ![ponyomixer9000 GUI](http://files.callistix.net/puredata/ponyomixer9000_gui.png)
 
