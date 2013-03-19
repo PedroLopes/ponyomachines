@@ -1,4 +1,4 @@
-#N canvas 309 119 637 552 10;
+#N canvas 309 115 637 552 10;
 #N canvas 1369 49 708 437 mixer 0;
 #X obj 183 88 +~;
 #X obj 141 88 +~;
@@ -735,8 +735,8 @@
 #X connect 20 1 6 1;
 #X restore 502 331 pd mixer ........;
 #X obj 502 353 dac~;
-#X obj 18 -23 cnv 15 464 393 empty empty PONYOMIXER:9000 10 20 0 22
--185360 -261234 0;
+#X obj 18 -23 cnv 15 464 393 empty empty ponyoMixer 10 20 0 22 -185360
+-261234 0;
 #X obj 38 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 48 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
