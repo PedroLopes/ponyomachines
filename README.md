@@ -23,7 +23,6 @@ Extensible 4-channel audio-mixer for Pure Data.
 
 ### Instructions
 
-**connect to the mixer**
-
+**connect to the mixer**:<br>
 Just connect your audio outputs to the inlets of the [pd mixer] block in following order (ch = channel, l = left, r = right):
 ch1l ch1r ch2l ch2r ch3l ch3r ch4l ch4r
