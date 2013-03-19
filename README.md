@@ -12,3 +12,11 @@ Features
 - global reset button for getting "factory" settings quickly
 - VU meters, switchable between pre and post metering
 - mute and solo buttons for each channel
+
+Instructions
+------------
+### connect to the mixer
+
+Just connect your audio outputs to the inlets of the [pd mixer] block in following order (ch = channel, l = left, r = right):
+
+ch1l ch1r ch2l ch2r ch3l ch3r ch4l ch4r
