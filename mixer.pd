@@ -1,5 +1,5 @@
-#N canvas 134 115 637 552 10;
-#N canvas 1369 49 486 248 mixer 1;
+#N canvas 134 111 637 552 10;
+#N canvas 1369 49 708 437 mixer 0;
 #X obj 183 88 +~;
 #X obj 141 88 +~;
 #X obj 169 196 outlet~;
@@ -8,74 +8,74 @@
 #X obj 161 115 +~;
 #X obj 223 143 +~;
 #X obj 181 142 +~;
-#N canvas 1608 131 885 621 mixer_track1 0;
-#X obj 184 94 inlet~;
-#X obj 241 95 inlet~;
-#X obj 112 460 env~;
-#X obj 284 464 env~;
-#X obj 296 52 receive track1_vol;
-#X obj 65 14 receive track1_bal;
-#X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 100 256;
-#X obj 296 100 / 100;
-#X obj 203 140 *~;
-#X obj 253 140 *~;
-#X obj 237 183 *~;
-#X obj 188 183 *~;
-#X obj 159 397 env~;
-#X obj 208 397 env~;
-#X obj 31 43 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 208 424 - 100;
-#X obj 284 491 - 100;
-#X obj 112 487 - 100;
-#X obj 266 429 receive mixer_vumode;
-#X obj 110 567 send track1_vu1;
-#X obj 216 567 send track1_vu2;
-#X obj 183 468 - 1;
-#X obj 183 491 abs;
-#X obj 183 515 *;
-#X obj 155 468 *;
-#X obj 159 422 - 100;
-#X obj 155 540 +;
-#X obj 244 468 - 1;
-#X obj 244 491 abs;
-#X obj 244 515 *;
-#X obj 216 468 *;
-#X obj 216 540 +;
-#X obj 68 394 outlet~;
-#X obj 285 393 outlet~;
-#X obj 97 40 / 50;
-#X obj 111 67 + 1;
-#X obj 111 94 min 1;
-#X obj 67 67 * -1;
-#X obj 67 94 + 1;
-#X obj 67 121 min 1;
-#X obj 318 132 receive track1_mute;
-#X obj 318 213 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#N canvas 1537 127 956 709 mixer_track1 0;
+#X obj 313 96 inlet~;
+#X obj 370 97 inlet~;
+#X obj 241 462 env~;
+#X obj 413 466 env~;
+#X obj 425 54 receive track1_vol;
+#X obj 194 16 receive track1_bal;
+#X obj 455 80 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 22.6695 256;
+#X obj 425 102 / 100;
+#X obj 332 142 *~;
+#X obj 382 142 *~;
+#X obj 366 185 *~;
+#X obj 317 185 *~;
+#X obj 288 399 env~;
+#X obj 337 399 env~;
+#X obj 160 45 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 -46.7742 256;
+#X obj 337 426 - 100;
+#X obj 413 493 - 100;
+#X obj 241 489 - 100;
+#X obj 395 431 receive mixer_vumode;
+#X obj 239 569 send track1_vu1;
+#X obj 345 569 send track1_vu2;
+#X obj 312 470 - 1;
+#X obj 312 493 abs;
+#X obj 312 517 *;
+#X obj 284 470 *;
+#X obj 288 424 - 100;
+#X obj 284 542 +;
+#X obj 373 470 - 1;
+#X obj 373 493 abs;
+#X obj 373 517 *;
+#X obj 345 470 *;
+#X obj 345 542 +;
+#X obj 197 396 outlet~;
+#X obj 414 395 outlet~;
+#X obj 226 42 / 50;
+#X obj 240 69 + 1;
+#X obj 240 96 min 1;
+#X obj 196 69 * -1;
+#X obj 196 96 + 1;
+#X obj 196 123 min 1;
+#X obj 447 134 receive track1_mute;
+#X obj 447 215 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 318 238 - 1;
-#X obj 318 265 abs;
-#X obj 343 159 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -262144
+#X obj 447 240 - 1;
+#X obj 447 267 abs;
+#X obj 472 161 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -262144
 -1 -1;
-#X obj 159 370 *~;
-#X obj 207 370 *~;
-#X msg 343 184 0;
-#X obj 343 211 send track1_mute_reset;
-#X obj -18 172 receive mixer_solo_fac;
-#X obj -18 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 288 372 *~;
+#X obj 336 372 *~;
+#X msg 472 186 0;
+#X obj 472 213 send track1_mute_reset;
+#X obj 111 174 receive mixer_solo_fac;
+#X obj 111 201 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 37 147 receive track1_solo;
+#X obj 47 174 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj -92 145 receive track1_solo;
-#X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj -82 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj -92 241 +;
-#X obj -92 268 min 1;
-#X obj -92 295 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 222 323 *~;
-#X obj 173 323 *~;
+#X obj 47 208 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 37 243 +;
+#X obj 37 270 min 1;
+#X obj 37 297 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 351 325 *~;
+#X obj 302 325 *~;
 #X connect 0 0 2 0;
 #X connect 0 0 8 1;
 #X connect 1 0 3 0;
@@ -152,83 +152,83 @@
 #X obj 301 14 inlet~;
 #X obj 361 14 inlet~;
 #X obj 415 14 inlet~;
-#N canvas 1485 379 881 614 mixer_master 0;
-#X obj 184 94 inlet~;
-#X obj 241 95 inlet~;
-#X obj 141 289 env~;
-#X obj 313 293 env~;
-#X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 4.66102 256;
-#X obj 296 100 / 100;
-#X obj 203 140 *~;
-#X obj 253 140 *~;
-#X obj 237 183 *~;
-#X obj 188 183 *~;
-#X obj 188 226 env~;
-#X obj 237 226 env~;
-#X obj 31 63 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#N canvas 1507 202 1043 614 mixer_master 0;
+#X obj 218 126 inlet~;
+#X obj 275 127 inlet~;
+#X obj 175 321 env~;
+#X obj 347 325 env~;
+#X obj 360 110 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 30.7203 256;
+#X obj 330 132 / 100;
+#X obj 237 172 *~;
+#X obj 287 172 *~;
+#X obj 271 215 *~;
+#X obj 222 215 *~;
+#X obj 222 258 env~;
+#X obj 271 258 env~;
+#X obj 65 95 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
-#X obj 237 253 - 100;
-#X obj 313 320 - 100;
-#X obj 141 316 - 100;
-#X obj 295 258 receive mixer_vumode;
-#X obj 212 297 - 1;
-#X obj 212 320 abs;
-#X obj 212 344 *;
-#X obj 184 297 *;
-#X obj 188 251 - 100;
-#X obj 184 369 +;
-#X obj 273 297 - 1;
-#X obj 273 320 abs;
-#X obj 273 344 *;
-#X obj 245 297 *;
-#X obj 245 369 +;
-#X obj 97 213 outlet~;
-#X obj 314 212 outlet~;
-#X obj 97 60 / 50;
-#X obj 111 87 + 1;
-#X obj 111 114 min 1;
-#X obj 67 87 * -1;
-#X obj 67 114 + 1;
-#X obj 67 141 min 1;
-#X obj 65 34 receive master_bal;
-#X obj 296 52 receive master_vol;
-#X obj 139 395 send master_vu1;
-#X obj 245 395 send master_vu2;
-#X obj -77 60 bng 15 250 50 0 mixer_reset empty empty 17 7 0 10 -262144
+#X obj 271 285 - 100;
+#X obj 347 352 - 100;
+#X obj 175 348 - 100;
+#X obj 329 290 receive mixer_vumode;
+#X obj 246 329 - 1;
+#X obj 246 352 abs;
+#X obj 246 376 *;
+#X obj 218 329 *;
+#X obj 222 283 - 100;
+#X obj 218 401 +;
+#X obj 307 329 - 1;
+#X obj 307 352 abs;
+#X obj 307 376 *;
+#X obj 279 329 *;
+#X obj 279 401 +;
+#X obj 131 245 outlet~;
+#X obj 348 244 outlet~;
+#X obj 131 92 / 50;
+#X obj 145 119 + 1;
+#X obj 145 146 min 1;
+#X obj 101 119 * -1;
+#X obj 101 146 + 1;
+#X obj 101 173 min 1;
+#X obj 99 66 receive master_bal;
+#X obj 330 84 receive master_vol;
+#X obj 173 427 send master_vu1;
+#X obj 279 427 send master_vu2;
+#X obj -43 92 bng 15 250 50 0 mixer_reset empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj -77 33 loadbang;
-#X msg -77 87 \; pd dsp 1;
-#X obj 495 53 receive track1_solo;
-#X obj 495 80 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj -43 65 loadbang;
+#X msg -43 119 \; pd dsp 1;
+#X obj 529 85 receive track1_solo;
+#X obj 529 112 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 520 80 receive track2_solo;
-#X obj 545 107 receive track3_solo;
-#X obj 570 134 receive track4_solo;
-#X obj 520 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 554 112 receive track2_solo;
+#X obj 579 139 receive track3_solo;
+#X obj 604 166 receive track4_solo;
+#X obj 554 139 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 545 134 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 579 166 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 570 161 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 604 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 495 132 +;
-#X obj 495 159 +;
-#X obj 495 186 +;
-#X obj 475 107 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 529 164 +;
+#X obj 529 191 +;
+#X obj 529 218 +;
+#X obj 509 139 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 495 213 min 1;
-#X obj 495 240 - 1;
-#X obj 495 267 abs;
-#X obj 495 318 send mixer_solo_fac;
-#X obj 505 294 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj 664 222 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -262144
+#X obj 529 245 min 1;
+#X obj 529 272 - 1;
+#X obj 529 299 abs;
+#X obj 529 350 send mixer_solo_fac;
+#X obj 539 326 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 1 256;
+#X obj 698 254 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -262144
 -1 -1;
-#X msg 664 247 0;
-#X obj 694 274 send track1_solo_reset;
-#X obj 684 301 send track2_solo_reset;
-#X obj 674 328 send track3_solo_reset;
-#X obj 664 355 send track4_solo_reset;
+#X msg 698 279 0;
+#X obj 728 306 send track1_solo_reset;
+#X obj 718 333 send track2_solo_reset;
+#X obj 708 360 send track3_solo_reset;
+#X obj 698 387 send track4_solo_reset;
 #X connect 0 0 2 0;
 #X connect 0 0 6 1;
 #X connect 1 0 3 0;
@@ -307,7 +307,7 @@
 #X obj 112 460 env~;
 #X obj 284 464 env~;
 #X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 100 256;
+-262144 -1 -1 37.5 256;
 #X obj 296 100 / 100;
 #X obj 203 140 *~;
 #X obj 253 140 *~;
@@ -316,7 +316,7 @@
 #X obj 159 397 env~;
 #X obj 208 397 env~;
 #X obj 31 43 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 38.7097 256;
 #X obj 208 424 - 100;
 #X obj 284 491 - 100;
 #X obj 112 487 - 100;
@@ -351,7 +351,7 @@
 #X msg 343 184 0;
 #X obj -18 172 receive mixer_solo_fac;
 #X obj -18 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 0 256;
 #X obj -82 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -359,7 +359,7 @@
 #X obj -92 241 +;
 #X obj -92 268 min 1;
 #X obj -92 295 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 1 256;
 #X obj 222 323 *~;
 #X obj 173 323 *~;
 #X obj 65 14 receive track2_bal;
@@ -443,7 +443,7 @@
 #X obj 112 460 env~;
 #X obj 284 464 env~;
 #X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 100 256;
+-262144 -1 -1 37.5 256;
 #X obj 296 100 / 100;
 #X obj 203 140 *~;
 #X obj 253 140 *~;
@@ -452,7 +452,7 @@
 #X obj 159 397 env~;
 #X obj 208 397 env~;
 #X obj 31 43 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 -22.5806 256;
 #X obj 208 424 - 100;
 #X obj 284 491 - 100;
 #X obj 112 487 - 100;
@@ -487,9 +487,9 @@
 #X msg 343 184 0;
 #X obj -18 172 receive mixer_solo_fac;
 #X obj -18 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
+#X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
 #X obj -82 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -92 241 +;
@@ -579,7 +579,7 @@
 #X obj 112 460 env~;
 #X obj 284 464 env~;
 #X obj 326 78 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 100 256;
+-262144 -1 -1 20.5508 256;
 #X obj 296 100 / 100;
 #X obj 203 140 *~;
 #X obj 253 140 *~;
@@ -588,7 +588,7 @@
 #X obj 159 397 env~;
 #X obj 208 397 env~;
 #X obj 31 43 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
+-262144 -1 -1 35.4839 256;
 #X obj 208 424 - 100;
 #X obj 284 491 - 100;
 #X obj 112 487 - 100;
@@ -623,9 +623,9 @@
 #X msg 343 184 0;
 #X obj -18 172 receive mixer_solo_fac;
 #X obj -18 199 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--262144 -1 -1 0 256;
-#X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -262144 -1 -1 1 256;
+#X obj -82 172 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 0 256;
 #X obj -82 206 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -92 241 +;
@@ -735,18 +735,18 @@
 #X connect 20 1 6 1;
 #X restore 493 307 pd mixer ........;
 #X obj 493 329 dac~;
-#X obj 18 -23 cnv 15 464 393 empty empty SUPER-MIXMASTER-4000 10 20
-0 22 -185360 -261234 0;
+#X obj 18 -23 cnv 15 464 393 empty empty PONYOMIXER:9000 10 20 0 22
+-185360 -261234 0;
 #X obj 38 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 48 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 100 256;
+-86277 -261234 -1 22.6695 256;
 #X obj 48 254 knob 32 32 -50 50 0 0 track1_bal empty empty 0 -12 0
-8 -185360 -261234 -1 1550 1;
+8 -185360 -261234 -1 100 1;
 #X obj 48 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 0 256;
+-86277 -261234 -1 -46.7742 256;
 #X obj 48 69 vsl 15 119 0 125 0 0 track1_vol empty empty 0 -9 0 10
--185360 -261234 -1 9440 1;
+-185360 -261234 -1 2140 1;
 #X obj 48 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 48 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -762,13 +762,13 @@
 #X obj 107 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 117 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 100 256;
+-86277 -261234 -1 37.5 256;
 #X obj 117 254 knob 32 32 -50 50 0 0 track2_bal empty empty 0 -12 0
-8 -185360 -261234 -1 1550 1;
+8 -185360 -261234 -1 2750 1;
 #X obj 117 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 0 256;
+-86277 -261234 -1 38.7097 256;
 #X obj 117 69 vsl 15 119 0 125 0 0 track2_vol empty empty 0 -9 0 10
--185360 -261234 -1 9440 1;
+-185360 -261234 -1 3540 1;
 #X obj 117 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 117 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -784,13 +784,13 @@
 #X obj 176 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 186 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 100 256;
+-86277 -261234 -1 37.5 256;
 #X obj 186 254 knob 32 32 -50 50 0 0 track3_bal empty empty 0 -12 0
-8 -185360 -261234 -1 1550 1;
+8 -185360 -261234 -1 850 1;
 #X obj 186 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 0 256;
+-86277 -261234 -1 -22.5806 256;
 #X obj 186 69 vsl 15 119 0 125 0 0 track3_vol empty empty 0 -9 0 10
--185360 -261234 -1 9440 1;
+-185360 -261234 -1 3540 1;
 #X obj 186 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 186 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -806,13 +806,13 @@
 #X obj 245 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 255 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 100 256;
+-86277 -261234 -1 20.5508 256;
 #X obj 255 254 knob 32 32 -50 50 0 0 track4_bal empty empty 0 -12 0
-8 -185360 -261234 -1 1550 1;
+8 -185360 -261234 -1 2650 1;
 #X obj 255 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 0 256;
+-86277 -261234 -1 35.4839 256;
 #X obj 255 69 vsl 15 119 0 125 0 0 track4_vol empty empty 0 -9 0 10
--185360 -261234 -1 9440 1;
+-185360 -261234 -1 1940 1;
 #X obj 255 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 255 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -828,13 +828,13 @@
 #X obj 334 25 cnv 15 58 326 empty empty empty 4 8 0 10 -86277 -66577
 0;
 #X obj 344 191 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 4.66102 256;
+-86277 -261234 -1 30.7203 256;
 #X obj 344 254 knob 32 32 -50 50 0 0 master_bal empty empty 0 -12 0
 8 -185360 -261234 -1 1550 1;
 #X obj 344 293 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -86277 -261234 -1 0 256;
 #X obj 344 69 vsl 15 119 0 125 0 0 master_vol empty empty 0 -9 0 10
--185360 -261234 -1 440 1;
+-185360 -261234 -1 2900 1;
 #X obj 344 215 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X obj 344 35 bng 15 250 50 0 empty mixer_reset empty 17 7 0 10 -185360
@@ -869,11 +869,11 @@
 #X obj 186 317 tgl 15 0 track3_mute track3_mute_reset M 4 22 0 10 -185360
 -261234 -261234 0 1;
 #X obj 207 317 tgl 15 0 track3_solo track3_solo_reset S 4 22 0 10 -185360
--261234 -261234 1 1;
+-261234 -261234 0 1;
 #X obj 255 317 tgl 15 0 track4_mute track4_mute_reset M 4 22 0 10 -185360
 -261234 -261234 0 1;
 #X obj 276 317 tgl 15 0 track4_solo track4_solo_reset S 4 22 0 10 -185360
--261234 -261234 1 1;
+-261234 -261234 0 1;
 #X obj 526 169 osc~ 200;
 #X obj 545 201 osc~ 745;
 #X obj 568 230 osc~ 535;
