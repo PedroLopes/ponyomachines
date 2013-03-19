@@ -1,1 +1,2 @@
-nothing
+- divide main volume through number of channels
+- add a master postgain knob
