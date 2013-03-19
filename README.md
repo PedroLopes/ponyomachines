@@ -10,3 +10,5 @@ Features
 - global reset button for getting "factory" settings quickly
 - VU meters, switchable between pre and post metering
 - mute and solo buttons for each channel
+
+![ponyomixer900 GUI](http://files.callistix.net/puredata/ponyomixer9000_gui.png)
