@@ -1,5 +1,7 @@
 Extensible 4-channel audio-mixer for Pure Data.
 
+![ponyomixer900 GUI](http://files.callistix.net/puredata/ponyomixer9000_gui.png)
+
 The patch was created using <i>pd-0.43-extended</i> which can be downloaded here: [puredata.info] (http://puredata.info/)
 
 Features
@@ -10,5 +12,3 @@ Features
 - global reset button for getting "factory" settings quickly
 - VU meters, switchable between pre and post metering
 - mute and solo buttons for each channel
-
-![ponyomixer900 GUI](http://files.callistix.net/puredata/ponyomixer9000_gui.png)
