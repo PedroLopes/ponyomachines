@@ -1,57 +1,85 @@
-#N canvas 445 115 641 447 10;
-#X obj 135 90 cnv 15 252 212 empty empty ponyoTimer 10 20 0 22 -185360
+#N canvas 2401 312 641 447 10;
+#X obj 43 32 cnv 15 418 224 empty empty ponyoTimer 10 20 0 22 -185360
 -261682 0;
-#X obj 146 167 cnv 15 66 44 empty empty empty 20 12 0 8 -86277 -261234
+#X obj 54 76 cnv 15 66 60 empty empty empty 4 8 0 10 -86277 -261234
 0;
-#X obj 150 174 vradio 15 1 0 2 empty empty empty 0 -8 0 10 -185360
--261234 -1 0;
-#X obj 170 175 comment 0 10 helvetica ? 0 252 196 196 LFO;
-#X obj 170 191 comment 0 10 helvetica ? 0 252 196 196 random;
-#X obj 146 134 cnv 15 66 30 empty empty empty 4 8 0 10 -86277 -261234
-0;
-#X obj 151 142 bng 15 250 50 0 timer_reset empty reset 17 7 0 10 -185360
+#X obj 60 111 bng 15 250 50 0 timer_reset empty reset 17 7 0 10 -185360
 -261234 -261234;
-#X obj 215 134 cnv 15 161 156 empty empty empty 4 8 0 10 -86277 -261234
+#X obj 123 76 cnv 15 53 168 empty empty empty 4 8 0 10 -86277 -261234
 0;
-#X obj 146 214 cnv 15 66 56 empty empty empty 20 12 0 8 -86277 -261234
-0;
-#X obj 151 223 bng 15 250 50 0 empty empty click 17 8 0 10 -185360
--261234 -261234;
-#X obj 151 246 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+#X obj 430 43 bng 20 250 50 0 empty empty empty 17 8 0 10 -86277 -261234
+-261234;
+#X obj 391 49 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
 -86277 -261234 -261234 0 256;
-#X obj 224 267 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 400.095 256;
-#X obj 224 190 vsl 15 74 10 2000 0 0 empty empty base 0 -42 0 10 -185360
--261234 -261234 1431 1;
-#X obj 224 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+#X obj 132 221 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 124.957 256;
+#X obj 132 132 vsl 15 86 10 999 0 0 empty empty bpm 0 -42 0 10 -185360
+-261234 -261234 988 1;
+#X obj 132 98 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
 -261234 -1;
-#X msg 224 171 400;
-#X obj 277 267 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 0 256;
-#X obj 277 190 vsl 15 74 0 100 0 0 empty empty width 0 -42 0 10 -185360
--261234 -261234 0 1;
-#X obj 277 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
--261234 -1;
-#X msg 277 171 0;
-#X obj 322 267 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 1000.09 256;
-#X obj 322 190 vsl 15 74 10 2000 0 0 empty empty speed 0 -42 0 10 -185360
--261234 -261234 3632 1;
-#X obj 322 156 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
--261234 -1;
-#X msg 322 171 1000;
 #N canvas 1621 414 450 300 timer 0;
 #X obj -33 102 bng 15 250 50 0 timer_reset empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -33 75 loadbang;
 #X connect 1 0 0 0;
-#X restore 408 285 pd timer;
-#X connect 12 0 11 0;
-#X connect 13 0 14 0;
-#X connect 14 0 12 0;
-#X connect 16 0 15 0;
-#X connect 17 0 18 0;
-#X connect 18 0 16 0;
-#X connect 20 0 19 0;
-#X connect 21 0 22 0;
-#X connect 22 0 20 0;
+#X restore 472 239 pd timer;
+#X msg 132 113 125;
+#X obj 179 76 cnv 15 106 168 empty empty LFO 4 8 0 10 -86277 -261234
+0;
+#X obj 192 221 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 0 256;
+#X obj 192 144 vsl 15 74 0 100 0 0 empty empty width 0 -42 0 10 -185360
+-261234 -261234 0 1;
+#X obj 192 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 192 125 0;
+#X obj 232 221 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 1000.09 256;
+#X obj 232 144 vsl 15 74 10 2000 0 0 empty empty speed 0 -42 0 10 -185360
+-261234 -261234 3632 1;
+#X obj 232 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 232 125 1000;
+#X obj 294 76 cnv 15 156 168 empty empty RANDOM 4 8 0 10 -86277 -261234
+0;
+#X obj 307 221 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 0 256;
+#X obj 307 144 vsl 15 74 0 100 0 0 empty empty width 0 -42 0 10 -185360
+-261234 -261234 0 1;
+#X obj 307 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 307 125 0;
+#X obj 347 221 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 1000.09 256;
+#X obj 347 144 vsl 15 74 10 2000 0 0 empty empty speed 0 -42 0 10 -185360
+-261234 -261234 3632 1;
+#X obj 347 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 347 125 1000;
+#X obj 396 221 nbx 4 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-86277 -261234 -1 1000.09 256;
+#X obj 396 144 vsl 15 74 10 2000 0 0 empty empty spd_rnd 0 -42 0 10
+-185360 -261234 -261234 3632 1;
+#X obj 396 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
+-261234 -1;
+#X msg 396 125 1000;
+#X obj 60 86 tgl 15 0 empty empty run 17 7 0 10 -185360 -261234 -261234
+0 1;
+#X connect 7 0 6 0;
+#X connect 8 0 10 0;
+#X connect 10 0 7 0;
+#X connect 13 0 12 0;
+#X connect 14 0 15 0;
+#X connect 15 0 13 0;
+#X connect 17 0 16 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
+#X connect 22 0 21 0;
+#X connect 23 0 24 0;
+#X connect 24 0 22 0;
+#X connect 26 0 25 0;
+#X connect 27 0 28 0;
+#X connect 28 0 26 0;
+#X connect 30 0 29 0;
+#X connect 31 0 32 0;
+#X connect 32 0 30 0;
