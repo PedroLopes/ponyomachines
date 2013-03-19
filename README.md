@@ -1,6 +1,6 @@
 A collection of patches and machines for Pure Data.
 
-Following machines are currently implemented:
+Following machines are currently implemented:<br>
 **PONYOMIXER:9000** - extensible 4-channel audio-mixer.
 
 They have been created using <i>pd-0.43-extended</i> which can be downloaded here: [puredata.info] (http://puredata.info/).
