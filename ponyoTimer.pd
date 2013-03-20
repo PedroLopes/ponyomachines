@@ -1,4 +1,4 @@
-#N canvas 2401 312 641 447 10;
+#N canvas 213 226 584 304 10;
 #X obj 43 32 cnv 15 418 224 empty empty ponyoTimer 10 20 0 22 -185360
 -261682 0;
 #X obj 54 76 cnv 15 66 60 empty empty empty 4 8 0 10 -86277 -261234
@@ -7,21 +7,52 @@
 -261234 -261234;
 #X obj 123 76 cnv 15 53 168 empty empty empty 4 8 0 10 -86277 -261234
 0;
-#X obj 430 43 bng 20 250 50 0 empty empty empty 17 8 0 10 -86277 -261234
--261234;
-#X obj 391 49 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -261234 0 256;
+#X obj 430 43 bng 20 100 50 0 empty timer_finalpush empty 17 8 0 10
+-86277 -261234 -261234;
+#X obj 391 49 nbx 3 14 -1e+37 1e+37 0 0 empty timer_finalbpm empty
+0 -8 0 10 -86277 -261234 -261234 165.391 256;
 #X obj 132 221 nbx 3 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
--86277 -261234 -1 124.957 256;
-#X obj 132 132 vsl 15 86 10 999 0 0 empty empty bpm 0 -42 0 10 -185360
--261234 -261234 988 1;
+-86277 -261234 -1 165.391 256;
+#X obj 132 132 vsl 15 86 40 500 0 0 timer_bpm empty bpm 0 -42 0 10
+-185360 -261234 -261234 2317 1;
 #X obj 132 98 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
 -261234 -1;
-#N canvas 1621 414 450 300 timer 0;
+#N canvas 706 190 657 374 timer 0;
 #X obj -33 102 bng 15 250 50 0 timer_reset empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj -33 75 loadbang;
+#X obj 103 59 receive timer_run;
+#X obj 113 86 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 287 -31 receive timer_bpm;
+#X obj 297 -4 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 165.391 256;
+#X obj 103 111 metro 1000;
+#X obj 103 138 bng 15 250 50 0 timer_finalpush empty empty 17 7 0 10
+-262144 -1 -1;
+#X msg 254 -4 60;
+#X obj 272 23 /;
+#X obj 272 50 * 1000;
+#X msg 227 77 60000;
+#X obj 257 104 /;
+#X obj 257 155 send timer_finalbpm;
+#X obj 267 131 nbx 5 14 -1e+37 1e+37 0 0 empty empty empty 0 -8 0 10
+-262144 -1 -1 165.391 256;
 #X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 2 0 6 0;
+#X connect 4 0 5 0;
+#X connect 4 0 9 1;
+#X connect 4 0 8 0;
+#X connect 6 0 7 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 10 0 6 1;
+#X connect 10 0 12 1;
+#X connect 10 0 11 0;
+#X connect 11 0 12 0;
+#X connect 12 0 13 0;
+#X connect 12 0 14 0;
 #X restore 472 239 pd timer;
 #X msg 132 113 125;
 #X obj 179 76 cnv 15 106 168 empty empty LFO 4 8 0 10 -86277 -261234
@@ -63,8 +94,8 @@
 #X obj 396 110 bng 15 250 50 0 empty timer_reset empty 17 7 0 10 -185360
 -261234 -1;
 #X msg 396 125 1000;
-#X obj 60 86 tgl 15 0 empty empty run 17 7 0 10 -185360 -261234 -261234
-0 1;
+#X obj 60 86 tgl 15 0 timer_run empty run 17 7 0 10 -185360 -261234
+-261234 1 1;
 #X connect 7 0 6 0;
 #X connect 8 0 10 0;
 #X connect 10 0 7 0;
