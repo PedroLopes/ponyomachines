@@ -1,7 +1,7 @@
 A collection of patches and machines for Pure Data.
 
 Following machines are currently implemented:<br>
-**ponyoMixer** - extensible 4-channel audio-mixer.
+**ponyoMixer** - extensible 4-channel audio-mixer.<br>
 **ponyoTimer** - timer with LFO and random functions.
 
 They have been created using <i>pd-0.43-extended</i> which can be downloaded here: [puredata.info] (http://puredata.info/).
